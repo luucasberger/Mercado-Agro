@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		E945E9D925362D79009CE941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945E9D825362D79009CE941 /* AppDelegate.swift */; };
 		E945E9DB25362D79009CE941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945E9DA25362D79009CE941 /* SceneDelegate.swift */; };
-		E945E9DD25362D79009CE941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945E9DC25362D79009CE941 /* ViewController.swift */; };
 		E945E9E025362D79009CE941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945E9DE25362D79009CE941 /* Main.storyboard */; };
 		E945E9E225362D7A009CE941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E945E9E125362D7A009CE941 /* Assets.xcassets */; };
 		E945E9E525362D7A009CE941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945E9E325362D7A009CE941 /* LaunchScreen.storyboard */; };
+		E945E9F62536BE9F009CE941 /* Inicio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945E9F52536BE9F009CE941 /* Inicio.storyboard */; };
+		E945E9F92536BEB8009CE941 /* Favoritos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945E9F82536BEB8009CE941 /* Favoritos.storyboard */; };
+		E945EA002536BF00009CE941 /* MisVentas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945E9FF2536BF00009CE941 /* MisVentas.storyboard */; };
+		E945EA032536BF12009CE941 /* Notificaciones.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945EA022536BF12009CE941 /* Notificaciones.storyboard */; };
+		E945EA062536BF2D009CE941 /* Mas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945EA052536BF2D009CE941 /* Mas.storyboard */; };
+		E945EA0A2536CE1C009CE941 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945EA092536CE1C009CE941 /* HomeScreen.swift */; };
+		E95DB3F52537B94C00AE7892 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95DB3F42537B94C00AE7892 /* Product.swift */; };
+		E95F49012542366100823E0E /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F49002542366100823E0E /* K.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E945E9D525362D79009CE941 /* Mercado Agro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mercado Agro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E945E9D825362D79009CE941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E945E9DA25362D79009CE941 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E945E9DC25362D79009CE941 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E945E9DF25362D79009CE941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E945E9E125362D7A009CE941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E945E9E425362D7A009CE941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E945E9E625362D7A009CE941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E945E9F52536BE9F009CE941 /* Inicio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inicio.storyboard; sourceTree = "<group>"; };
+		E945E9F82536BEB8009CE941 /* Favoritos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favoritos.storyboard; sourceTree = "<group>"; };
+		E945E9FF2536BF00009CE941 /* MisVentas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MisVentas.storyboard; sourceTree = "<group>"; };
+		E945EA022536BF12009CE941 /* Notificaciones.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notificaciones.storyboard; sourceTree = "<group>"; };
+		E945EA052536BF2D009CE941 /* Mas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mas.storyboard; sourceTree = "<group>"; };
+		E945EA092536CE1C009CE941 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		E95DB3F42537B94C00AE7892 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E95F49002542366100823E0E /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,52 @@
 			children = (
 				E945E9D825362D79009CE941 /* AppDelegate.swift */,
 				E945E9DA25362D79009CE941 /* SceneDelegate.swift */,
-				E945E9DC25362D79009CE941 /* ViewController.swift */,
-				E945E9DE25362D79009CE941 /* Main.storyboard */,
+				E95F49002542366100823E0E /* K.swift */,
+				E95DB3EE2537B88500AE7892 /* Model */,
+				E945E9EE2536BD2F009CE941 /* Storyboards */,
+				E945EA082536CCFB009CE941 /* Screens */,
 				E945E9E125362D7A009CE941 /* Assets.xcassets */,
 				E945E9E325362D7A009CE941 /* LaunchScreen.storyboard */,
 				E945E9E625362D7A009CE941 /* Info.plist */,
 			);
 			path = "Mercado Agro";
+			sourceTree = "<group>";
+		};
+		E945E9EE2536BD2F009CE941 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E945E9DE25362D79009CE941 /* Main.storyboard */,
+				E945E9F52536BE9F009CE941 /* Inicio.storyboard */,
+				E945E9F82536BEB8009CE941 /* Favoritos.storyboard */,
+				E945E9FF2536BF00009CE941 /* MisVentas.storyboard */,
+				E945EA022536BF12009CE941 /* Notificaciones.storyboard */,
+				E945EA052536BF2D009CE941 /* Mas.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E945EA082536CCFB009CE941 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E95F48FE2542350100823E0E /* Inicio */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E95DB3EE2537B88500AE7892 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E95DB3F42537B94C00AE7892 /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E95F48FE2542350100823E0E /* Inicio */ = {
+			isa = PBXGroup;
+			children = (
+				E945EA092536CE1C009CE941 /* HomeScreen.swift */,
+			);
+			path = Inicio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +177,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E945EA032536BF12009CE941 /* Notificaciones.storyboard in Resources */,
 				E945E9E525362D7A009CE941 /* LaunchScreen.storyboard in Resources */,
 				E945E9E225362D7A009CE941 /* Assets.xcassets in Resources */,
 				E945E9E025362D79009CE941 /* Main.storyboard in Resources */,
+				E945E9F92536BEB8009CE941 /* Favoritos.storyboard in Resources */,
+				E945E9F62536BE9F009CE941 /* Inicio.storyboard in Resources */,
+				E945EA062536BF2D009CE941 /* Mas.storyboard in Resources */,
+				E945EA002536BF00009CE941 /* MisVentas.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E945E9DD25362D79009CE941 /* ViewController.swift in Sources */,
+				E945EA0A2536CE1C009CE941 /* HomeScreen.swift in Sources */,
+				E95F49012542366100823E0E /* K.swift in Sources */,
+				E95DB3F52537B94C00AE7892 /* Product.swift in Sources */,
 				E945E9D925362D79009CE941 /* AppDelegate.swift in Sources */,
 				E945E9DB25362D79009CE941 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 567Q3MZSVH;
 				INFOPLIST_FILE = "Mercado Agro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "LucasBerger.Mercado-Agro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 567Q3MZSVH;
 				INFOPLIST_FILE = "Mercado Agro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "LucasBerger.Mercado-Agro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

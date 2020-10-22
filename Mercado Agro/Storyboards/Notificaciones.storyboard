@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iph-d0-DBn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notificaciones-->
+        <scene sceneID="HJ4-xB-ODN">
+            <objects>
+                <viewController id="Iph-d0-DBn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gFL-ur-2v2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="qfL-bV-Fhq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Oj-Y5-5Xk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qfL-bV-Fhq" firstAttribute="leading" secondItem="gFL-ur-2v2" secondAttribute="leading" id="8Xv-t6-zEu"/>
+                            <constraint firstItem="qfL-bV-Fhq" firstAttribute="top" secondItem="gFL-ur-2v2" secondAttribute="top" id="ExL-tW-hQA"/>
+                            <constraint firstAttribute="trailing" secondItem="qfL-bV-Fhq" secondAttribute="trailing" id="Vlu-NW-ICe"/>
+                            <constraint firstAttribute="bottom" secondItem="qfL-bV-Fhq" secondAttribute="bottom" id="ewh-vt-QJE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notificaciones" image="bell" catalog="system" id="bI4-zh-Nky"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFY-0t-CpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="66.5" height="66.5"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

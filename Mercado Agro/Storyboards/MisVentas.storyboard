@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i1u-rF-nBl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mis Ventas-->
+        <scene sceneID="jkp-2j-Qs6">
+            <objects>
+                <viewController id="i1u-rF-nBl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ef1-0U-er3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="lzE-P1-zvu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TX8-HA-Z9J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lzE-P1-zvu" firstAttribute="top" secondItem="ef1-0U-er3" secondAttribute="top" id="2M6-Gm-epm"/>
+                            <constraint firstAttribute="trailing" secondItem="lzE-P1-zvu" secondAttribute="trailing" id="8rU-Mf-uwp"/>
+                            <constraint firstAttribute="bottom" secondItem="lzE-P1-zvu" secondAttribute="bottom" id="M6e-il-akH"/>
+                            <constraint firstItem="lzE-P1-zvu" firstAttribute="leading" secondItem="ef1-0U-er3" secondAttribute="leading" id="YSX-Wb-O67"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mis Ventas" image="tag" catalog="system" id="RFc-dQ-cyh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnd-vw-Gw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="66.5" height="66.5"/>
+        <image name="tag" catalog="system" width="128" height="119"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
