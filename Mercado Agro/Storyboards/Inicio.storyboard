@@ -3,40 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="IsJ-Rx-aCZ">
-            <objects>
-                <tableViewController id="b6A-Cq-2fB" customClass="HomeScreen" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WLg-T8-SBN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="CE8-bW-QGA">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CE8-bW-QGA" id="3sS-fi-SbK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="b6A-Cq-2fB" id="jIi-J5-O1Q"/>
-                            <outlet property="delegate" destination="b6A-Cq-2fB" id="8kj-in-xRT"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="v6A-NO-g2C"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jn8-MD-vbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="583" y="794"/>
-        </scene>
         <!--Inicio-->
         <scene sceneID="9JZ-YZ-W94">
             <objects>
@@ -48,15 +20,136 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="b6A-Cq-2fB" kind="relationship" relationship="rootViewController" id="lbp-Tn-9f2"/>
+                        <segue destination="XZa-Dv-R59" kind="relationship" relationship="rootViewController" id="ya7-IP-Lf5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7su-1h-VBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-306" y="794"/>
         </scene>
+        <!--Home Screen-->
+        <scene sceneID="rla-eK-bA5">
+            <objects>
+                <viewController storyboardIdentifier="HomeScreenID" id="XZa-Dv-R59" customClass="HomeScreen" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iVh-bK-qS9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ymq-Rm-m0Q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-57-xs2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" id="0D9-jy-ins">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0D9-jy-ins" id="wwV-GJ-6kM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q50-75-XYu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ymq-Rm-m0Q" firstAttribute="leading" secondItem="iVh-bK-qS9" secondAttribute="leading" id="6o6-LY-FuV"/>
+                            <constraint firstItem="8fK-57-xs2" firstAttribute="top" secondItem="q50-75-XYu" secondAttribute="top" id="FRz-4y-bfA"/>
+                            <constraint firstAttribute="trailing" secondItem="8fK-57-xs2" secondAttribute="trailing" id="SG6-cB-mxv"/>
+                            <constraint firstItem="8fK-57-xs2" firstAttribute="bottom" secondItem="q50-75-XYu" secondAttribute="bottom" id="aev-lL-rSS"/>
+                            <constraint firstAttribute="trailing" secondItem="ymq-Rm-m0Q" secondAttribute="trailing" id="nGw-GA-1ay"/>
+                            <constraint firstItem="ymq-Rm-m0Q" firstAttribute="top" secondItem="iVh-bK-qS9" secondAttribute="top" id="nqi-Em-DgE"/>
+                            <constraint firstItem="8fK-57-xs2" firstAttribute="leading" secondItem="iVh-bK-qS9" secondAttribute="leading" id="omD-GZ-UcF"/>
+                            <constraint firstAttribute="bottom" secondItem="ymq-Rm-m0Q" secondAttribute="bottom" id="sYe-wu-vgs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UOZ-NE-qkO">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar en Mercado Agro..." textAlignment="natural" minimumFontSize="17" id="Icq-mD-107">
+                            <rect key="frame" x="12" y="5" width="342.5" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartQuotesType="no"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="XUo-1l-dRa"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="8fK-57-xs2" id="CQi-qW-URN"/>
+                        <outlet property="textField" destination="Icq-mD-107" id="qUB-Fj-eMb"/>
+                        <segue destination="DmT-3f-JkC" kind="show" identifier="HomeScreenToResultsScreen" id="zHl-zt-UEX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Fe-qb-Jl2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518.84057971014499" y="793.52678571428567"/>
+        </scene>
+        <!--Results Screen-->
+        <scene sceneID="fDc-BD-dkE">
+            <objects>
+                <viewController storyboardIdentifier="ResultsScreenID" id="DmT-3f-JkC" customClass="ResultsScreen" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3qJ-1E-1tN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="5W5-N0-g8m">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QOs-6d-O1Q">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" id="iEB-ei-vUd">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iEB-ei-vUd" id="x20-Qh-ena">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d1B-fX-vHT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QOs-6d-O1Q" firstAttribute="leading" secondItem="3qJ-1E-1tN" secondAttribute="leading" id="9Q2-vB-lfE"/>
+                            <constraint firstAttribute="trailing" secondItem="QOs-6d-O1Q" secondAttribute="trailing" id="OGr-2r-wee"/>
+                            <constraint firstItem="5W5-N0-g8m" firstAttribute="top" secondItem="3qJ-1E-1tN" secondAttribute="top" id="ZjL-BU-15k"/>
+                            <constraint firstAttribute="trailing" secondItem="5W5-N0-g8m" secondAttribute="trailing" id="aUV-B2-RgS"/>
+                            <constraint firstItem="QOs-6d-O1Q" firstAttribute="bottom" secondItem="d1B-fX-vHT" secondAttribute="bottom" id="jYd-0Y-vNe"/>
+                            <constraint firstItem="QOs-6d-O1Q" firstAttribute="top" secondItem="d1B-fX-vHT" secondAttribute="top" id="nWj-3z-M6O"/>
+                            <constraint firstAttribute="bottom" secondItem="5W5-N0-g8m" secondAttribute="bottom" id="oZR-Ix-PYh"/>
+                            <constraint firstItem="5W5-N0-g8m" firstAttribute="leading" secondItem="3qJ-1E-1tN" secondAttribute="leading" id="pPr-Zp-hyD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kF2-co-yLl">
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Src-Aw-0KM">
+                            <rect key="frame" x="191" y="5" width="32" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="QOs-6d-O1Q" id="fcl-xA-2vS"/>
+                        <outlet property="textField" destination="Src-Aw-0KM" id="yQ5-be-caz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pX-e1-NL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314.4927536231885" y="793.52678571428567"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Background" width="66.5" height="66.5"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

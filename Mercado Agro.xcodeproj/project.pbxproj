@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9351A762542A07F00AE6C6C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9351A752542A07F00AE6C6C /* HomeScreen.swift */; };
+		E9351A792542AE0900AE6C6C /* ResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9351A782542AE0900AE6C6C /* ResultsScreen.swift */; };
 		E945E9D925362D79009CE941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945E9D825362D79009CE941 /* AppDelegate.swift */; };
 		E945E9DB25362D79009CE941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945E9DA25362D79009CE941 /* SceneDelegate.swift */; };
 		E945E9E025362D79009CE941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945E9DE25362D79009CE941 /* Main.storyboard */; };
@@ -17,12 +19,13 @@
 		E945EA002536BF00009CE941 /* MisVentas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945E9FF2536BF00009CE941 /* MisVentas.storyboard */; };
 		E945EA032536BF12009CE941 /* Notificaciones.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945EA022536BF12009CE941 /* Notificaciones.storyboard */; };
 		E945EA062536BF2D009CE941 /* Mas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945EA052536BF2D009CE941 /* Mas.storyboard */; };
-		E945EA0A2536CE1C009CE941 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945EA092536CE1C009CE941 /* HomeScreen.swift */; };
 		E95DB3F52537B94C00AE7892 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95DB3F42537B94C00AE7892 /* Product.swift */; };
 		E95F49012542366100823E0E /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F49002542366100823E0E /* K.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9351A752542A07F00AE6C6C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		E9351A782542AE0900AE6C6C /* ResultsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreen.swift; sourceTree = "<group>"; };
 		E945E9D525362D79009CE941 /* Mercado Agro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mercado Agro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E945E9D825362D79009CE941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E945E9DA25362D79009CE941 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,6 @@
 		E945E9FF2536BF00009CE941 /* MisVentas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MisVentas.storyboard; sourceTree = "<group>"; };
 		E945EA022536BF12009CE941 /* Notificaciones.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notificaciones.storyboard; sourceTree = "<group>"; };
 		E945EA052536BF2D009CE941 /* Mas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mas.storyboard; sourceTree = "<group>"; };
-		E945EA092536CE1C009CE941 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		E95DB3F42537B94C00AE7892 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		E95F49002542366100823E0E /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +117,8 @@
 		E95F48FE2542350100823E0E /* Inicio */ = {
 			isa = PBXGroup;
 			children = (
-				E945EA092536CE1C009CE941 /* HomeScreen.swift */,
+				E9351A752542A07F00AE6C6C /* HomeScreen.swift */,
+				E9351A782542AE0900AE6C6C /* ResultsScreen.swift */,
 			);
 			path = Inicio;
 			sourceTree = "<group>";
@@ -195,10 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E945EA0A2536CE1C009CE941 /* HomeScreen.swift in Sources */,
 				E95F49012542366100823E0E /* K.swift in Sources */,
+				E9351A762542A07F00AE6C6C /* HomeScreen.swift in Sources */,
 				E95DB3F52537B94C00AE7892 /* Product.swift in Sources */,
 				E945E9D925362D79009CE941 /* AppDelegate.swift in Sources */,
+				E9351A792542AE0900AE6C6C /* ResultsScreen.swift in Sources */,
 				E945E9DB25362D79009CE941 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
