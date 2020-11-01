@@ -8,50 +8,66 @@
 import UIKit
 
 class HomeScreen: UIViewController {
-    @IBOutlet weak var textField: UITextField!
+    var searchController = UISearchController()
+    var models = [ModelP]()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.delegate = self
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        
+        models.append(ModelP(text: "Gallina", imageName: "GallinaImage", price: "US$ 19.99"))
+        models.append(ModelP(text: "Vaca", imageName: "VacaImage", price: "US$ 300.00"))
+        models.append(ModelP(text: "Cerdo", imageName: "CerdoImage", price: "US$ 99.99"))
+        
+        tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
         tableView.delegate = self
+        tableView.dataSource = self
         
         tableView.backgroundView = UIImageView(image: UIImage(named: K.background))
         
-        setupNavigationController()
-        setupUITextField()
-        setupTableView()
+        customizedNavigationController()
+        customizedSearchBar()
+        customizedTableView()
         
-        /////////////
+        ////////////////////////////////////////////////////////////////////////
+        
         
         
     }
     
-    func setupNavigationController() {
+    func customizedNavigationController() {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(imageLiteralResourceName: K.navigationBackground), for: UIBarMetrics.default)
-    }
-    
-    func setupUITextField() {
-        textField.placeholder = "Buscar en Mercado Agro"
+        navigationController?.navigationBar.isTranslucent = true
         
-        textField.layer.cornerRadius = 15.0
-        textField.layer.borderWidth = 2.0
-        textField.layer.borderColor = UIColor.white.cgColor
-        
-        textField.clearButtonMode = .whileEditing
-        
-        let overlayButton = UIButton(type: .custom)
-        overlayButton.setImage(UIImage(systemName: "magnifyingglass.circle.fill"), for: .normal)
-        overlayButton.addTarget(self, action: #selector(textFieldShouldEndEditing(_:)), for: .touchUpInside)
-        overlayButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        textField.leftView = overlayButton
-        textField.leftViewMode = .always
+        navigationItem.titleView = searchController.searchBar
+        searchController.hidesNavigationBarDuringPresentation = false
         
     }
     
-    func setupTableView() {
+    func customizedSearchBar() {
+        let searchBar = searchController.searchBar
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+        searchBar.showsScopeBar = false
+        searchBar.showsBookmarkButton = false
+        searchBar.showsSearchResultsButton = false
+        
+        searchBar.placeholder = "Buscar en Mercado Agro"
+        searchBar.tintColor = .black
+        
+        if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.backgroundColor = .white
+            textfield.layer.cornerRadius = 15.0
+            textfield.font = UIFont.systemFont(ofSize: CGFloat(13))
+            textfield.layer.masksToBounds = true
+        }        
+    }
+    
+    func customizedTableView() {
         tableView.separatorStyle = .none
     }
     
@@ -66,34 +82,14 @@ class HomeScreen: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
 
-}
-
-// MARK: - UITextFieldDelegate
-
-extension HomeScreen: UITextFieldDelegate {
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-    }
-     
-     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-     }
-    
 }
 
 // MARK: - UITableViewDelegate
 
 extension HomeScreen: UITableViewDelegate {
-    /*
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        <#code#>
-    }
     
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         <#code#>
     }
@@ -101,13 +97,12 @@ extension HomeScreen: UITableViewDelegate {
 
 }
 
-
 // MARK: - UITableViewDataSource
 
 extension HomeScreen: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return models.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -115,9 +110,40 @@ extension HomeScreen: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
+        cell.configure(with: models)
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250.0
+    }
+}
+
+// MARK: - UISearchControllerDelegate
+
+extension HomeScreen: UISearchControllerDelegate {
+    
+}
+
+// MARK: - UISearchBarDelegate
+
+extension HomeScreen: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchController.searchBar.text = ""
+        searchController.resignFirstResponder()
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension HomeScreen: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
     
 }

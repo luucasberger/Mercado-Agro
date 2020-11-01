@@ -68,22 +68,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="UOZ-NE-qkO">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar en Mercado Agro..." textAlignment="natural" minimumFontSize="17" id="Icq-mD-107">
-                            <rect key="frame" x="12" y="5" width="342.5" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartQuotesType="no"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="XUo-1l-dRa"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="8fK-57-xs2" id="CQi-qW-URN"/>
-                        <outlet property="textField" destination="Icq-mD-107" id="qUB-Fj-eMb"/>
                         <segue destination="DmT-3f-JkC" kind="show" identifier="HomeScreenToResultsScreen" id="zHl-zt-UEX"/>
                     </connections>
                 </viewController>

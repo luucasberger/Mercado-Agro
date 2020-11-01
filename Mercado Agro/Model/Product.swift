@@ -9,6 +9,7 @@ import UIKit
 
 struct Product {
     
+    let id: Int
     var title: String
     var images: UIImageAsset
     var description: String
