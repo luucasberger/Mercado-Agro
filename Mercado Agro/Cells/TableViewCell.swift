@@ -24,10 +24,16 @@ class TableViewCell: UITableViewCell {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.itemSize = CGSize(width: 200, height: 200)
-        flowLayout.minimumLineSpacing = 2.0
+        flowLayout.minimumLineSpacing = 10.0
         flowLayout.minimumInteritemSpacing = 5.0
         self.collectionView.collectionViewLayout = flowLayout
         self.collectionView.showsHorizontalScrollIndicator = false
+        
+        collectionView.backgroundColor = .black
+        
+        categoryUIView.layer.cornerRadius = 5.0
+        
+        customizedTableViewCell()
     }
     
     static func nib() -> UINib {
@@ -41,6 +47,13 @@ class TableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func customizedTableViewCell() {
+        self.backgroundColor = .clear
+        self.selectionStyle = .none
+        categoryUIView.backgroundColor = #colorLiteral(red: 0.3019607843, green: 0.5647058824, blue: 0.05490196078, alpha: 1)
+        collectionView.backgroundColor = .clear
     }
 }
 
@@ -61,6 +74,6 @@ extension TableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 250, height: 250)
+        return CGSize(width: 150, height: 150)
     }
 }

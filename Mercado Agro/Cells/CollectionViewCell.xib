@@ -18,32 +18,31 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEm-MX-BmR">
-                        <rect key="frame" x="0.0" y="157" width="267" height="52"/>
+                        <rect key="frame" x="0.0" y="179" width="267" height="30"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US$ 150.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmf-P7-j9H">
-                                <rect key="frame" x="173" y="15.5" width="89" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="US$ 150.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmf-P7-j9H">
+                                <rect key="frame" x="173" y="4.5" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fu-7p-GZ8">
-                                <rect key="frame" x="5" y="15.5" width="48.5" height="21"/>
+                                <rect key="frame" x="5" y="4.5" width="48.5" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9fu-7p-GZ8" firstAttribute="leading" secondItem="rEm-MX-BmR" secondAttribute="leading" constant="5" id="cRd-iD-Mpp"/>
-                            <constraint firstAttribute="height" constant="52" id="jVL-V8-ohN"/>
-                            <constraint firstAttribute="trailing" secondItem="zmf-P7-j9H" secondAttribute="trailing" constant="5" id="plh-8p-ZaO"/>
-                            <constraint firstItem="zmf-P7-j9H" firstAttribute="centerY" secondItem="rEm-MX-BmR" secondAttribute="centerY" id="uTP-OR-brh"/>
+                            <constraint firstAttribute="height" constant="30" id="jVL-V8-ohN"/>
                             <constraint firstItem="9fu-7p-GZ8" firstAttribute="centerY" secondItem="rEm-MX-BmR" secondAttribute="centerY" id="vtT-Lt-mXw"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VacaImage" translatesAutoresizingMaskIntoConstraints="NO" id="wfy-Mv-ufT">
-                        <rect key="frame" x="0.0" y="0.0" width="267" height="157"/>
+                        <rect key="frame" x="0.0" y="0.0" width="267" height="179"/>
                     </imageView>
                 </subviews>
             </view>
@@ -66,7 +65,7 @@
                 <outlet property="productPriceLabel" destination="zmf-P7-j9H" id="no0-kD-9P0"/>
                 <outlet property="productUIImageView" destination="wfy-Mv-ufT" id="VFY-6x-4fl"/>
             </connections>
-            <point key="canvasLocation" x="395" y="164"/>
+            <point key="canvasLocation" x="-315" y="-16"/>
         </collectionViewCell>
     </objects>
     <resources>

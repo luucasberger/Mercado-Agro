@@ -24,10 +24,12 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(with model: ModelP) {
+        self.backgroundColor = .clear
         self.labelsUIView.backgroundColor = .white
         self.productNameLabel.text = model.text
         self.productPriceLabel.text = model.price
         self.productUIImageView.image = UIImage(named: model.imageName)
+        self.productUIImageView.layer.cornerRadius = 10.0
         
     }
 

@@ -18,15 +18,18 @@ class HomeScreen: UIViewController {
         searchController.delegate = self
         searchController.searchBar.delegate = self
         
-        models.append(ModelP(text: "Gallina", imageName: "GallinaImage", price: "US$ 19.99"))
-        models.append(ModelP(text: "Vaca", imageName: "VacaImage", price: "US$ 300.00"))
-        models.append(ModelP(text: "Cerdo", imageName: "CerdoImage", price: "US$ 99.99"))
+        models.append(ModelP(text: "Gallina", imageName: "GallinaImage", price: "US$ 19.99", category: "Categoría 1"))
+        models.append(ModelP(text: "Vaca", imageName: "VacaImage", price: "US$ 300.00", category: "Categoría 2"))
+        models.append(ModelP(text: "Cerdo", imageName: "CerdoImage", price: "US$ 99.99", category: "Categoría 3"))
+        models.append(ModelP(text: "Vaca", imageName: "VacaImage", price: "US$ 45.00", category: "Categoría 4"))
+        models.append(ModelP(text: "Gallina", imageName: "GallinaImage", price: "US$ 87.99", category: "Categoría 5"))
+        models.append(ModelP(text: "Cerdo", imageName: "CerdoImage", price: "US$ 125.00", category: "Categoría 6"))
         
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.backgroundView = UIImageView(image: UIImage(named: K.background))
+        tableView.backgroundColor = #colorLiteral(red: 0.9214094883, green: 0.9214094883, blue: 0.9214094883, alpha: 1)
         
         customizedNavigationController()
         customizedSearchBar()
@@ -112,11 +115,12 @@ extension HomeScreen: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
         cell.configure(with: models)
+        cell.categoryLabel.text = models[indexPath.row].category
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250.0
+        return 200
     }
 }
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E9351A762542A07F00AE6C6C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9351A752542A07F00AE6C6C /* HomeScreen.swift */; };
-		E9351A792542AE0900AE6C6C /* ResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9351A782542AE0900AE6C6C /* ResultsScreen.swift */; };
 		E945E9D925362D79009CE941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945E9D825362D79009CE941 /* AppDelegate.swift */; };
 		E945E9DB25362D79009CE941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945E9DA25362D79009CE941 /* SceneDelegate.swift */; };
 		E945E9E025362D79009CE941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945E9DE25362D79009CE941 /* Main.storyboard */; };
@@ -28,11 +27,11 @@
 		E994BFC9254B782E00EE7092 /* TableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994BFC8254B782E00EE7092 /* TableViewCellModel.swift */; };
 		E994BFCC254B78DB00EE7092 /* CollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994BFCB254B78DB00EE7092 /* CollectionViewCellModel.swift */; };
 		E994BFCF254E06E100EE7092 /* ModelP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994BFCE254E06E100EE7092 /* ModelP.swift */; };
+		E9D7B5A5255DE63300F68794 /* SearchResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7B5A4255DE63300F68794 /* SearchResultsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9351A752542A07F00AE6C6C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		E9351A782542AE0900AE6C6C /* ResultsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreen.swift; sourceTree = "<group>"; };
 		E945E9D525362D79009CE941 /* Mercado Agro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mercado Agro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E945E9D825362D79009CE941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E945E9DA25362D79009CE941 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		E994BFC8254B782E00EE7092 /* TableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellModel.swift; sourceTree = "<group>"; };
 		E994BFCB254B78DB00EE7092 /* CollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellModel.swift; sourceTree = "<group>"; };
 		E994BFCE254E06E100EE7092 /* ModelP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelP.swift; sourceTree = "<group>"; };
+		E9D7B5A4255DE63300F68794 /* SearchResultsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E9351A752542A07F00AE6C6C /* HomeScreen.swift */,
-				E9351A782542AE0900AE6C6C /* ResultsScreen.swift */,
+				E9D7B5A4255DE63300F68794 /* SearchResultsScreen.swift */,
 			);
 			path = Inicio;
 			sourceTree = "<group>";
@@ -234,11 +234,11 @@
 				E994BFCC254B78DB00EE7092 /* CollectionViewCellModel.swift in Sources */,
 				E994BFC5254B6EAE00EE7092 /* TableViewCell.swift in Sources */,
 				E9351A762542A07F00AE6C6C /* HomeScreen.swift in Sources */,
+				E9D7B5A5255DE63300F68794 /* SearchResultsScreen.swift in Sources */,
 				E95DB3F52537B94C00AE7892 /* Product.swift in Sources */,
 				E994BFCF254E06E100EE7092 /* ModelP.swift in Sources */,
 				E994BFBF254B6E9400EE7092 /* CollectionViewCell.swift in Sources */,
 				E945E9D925362D79009CE941 /* AppDelegate.swift in Sources */,
-				E9351A792542AE0900AE6C6C /* ResultsScreen.swift in Sources */,
 				E945E9DB25362D79009CE941 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

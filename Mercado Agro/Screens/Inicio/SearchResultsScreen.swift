@@ -1,19 +1,18 @@
 //
-//  ResultsScreen.swift
+//  SearchResultsScreen.swift
 //  Mercado Agro
 //
-//  Created by Lucas Berger on 10/23/20.
+//  Created by Lucas Berger on 11/12/20.
 //
 
 import UIKit
 
-class ResultsScreen: UIViewController {
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var tableView: UITableView!
-    
+class SearchResultsScreen: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+
+        // Do any additional setup after loading the view.
     }
     
 
