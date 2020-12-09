@@ -10,6 +10,7 @@ import UIKit
 class HomeScreen: UIViewController {
     var searchController = UISearchController()
     var models = [ModelP]()
+    var images = ["Ad1", "Ad2", "Ad3"]
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -25,7 +26,9 @@ class HomeScreen: UIViewController {
         models.append(ModelP(text: "Gallina", imageName: "GallinaImage", price: "US$ 87.99", category: "Categoría 5"))
         models.append(ModelP(text: "Cerdo", imageName: "CerdoImage", price: "US$ 125.00", category: "Categoría 6"))
         
-        tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
+        self.tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
+        self.tableView.register(OffersTableViewCell.nib(), forCellReuseIdentifier: OffersTableViewCell.identifier)
+                
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -36,10 +39,14 @@ class HomeScreen: UIViewController {
         customizedTableView()
         
         ////////////////////////////////////////////////////////////////////////
-        
-        
-        
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        let ad: OffersTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! OffersTableViewCell
+//        ad.collectionView.scrollToItem(at: IndexPath(row: 500, section: 0), at: .centeredHorizontally, animated: false)
+//    }
     
     func customizedNavigationController() {
         navigationController?.navigationBar.isTranslucent = true
@@ -77,15 +84,15 @@ class HomeScreen: UIViewController {
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 // MARK: - UITableViewDelegate
@@ -93,11 +100,11 @@ class HomeScreen: UIViewController {
 extension HomeScreen: UITableViewDelegate {
     
     /*
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
-    */
-
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     <#code#>
+     }
+     */
+    
 }
 
 // MARK: - UITableViewDataSource
@@ -105,7 +112,7 @@ extension HomeScreen: UITableViewDelegate {
 extension HomeScreen: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        return models.count + 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -113,10 +120,16 @@ extension HomeScreen: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
-        cell.configure(with: models)
-        cell.categoryLabel.text = models[indexPath.row].category
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: OffersTableViewCell.identifier, for: indexPath) as! OffersTableViewCell
+            cell.configure(with: images)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
+            cell.configure(with: models)
+            cell.categoryLabel.text = models[indexPath.row - 1].category
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

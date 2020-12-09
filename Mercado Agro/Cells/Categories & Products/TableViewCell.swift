@@ -19,7 +19,7 @@ class TableViewCell: UITableViewCell {
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-        collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        self.collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -37,7 +37,7 @@ class TableViewCell: UITableViewCell {
     }
     
     static func nib() -> UINib {
-        return UINib(nibName: "TableViewCell", bundle: nil)
+        return UINib(nibName: TableViewCell.identifier, bundle: nil)
     }
     
     func configure(with models: [ModelP]) {
@@ -56,6 +56,8 @@ class TableViewCell: UITableViewCell {
         collectionView.backgroundColor = .clear
     }
 }
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 
 extension TableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

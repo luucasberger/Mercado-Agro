@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OffersCollectionViewCell" id="gTV-IL-0wX" customClass="OffersCollectionViewCell" customModule="Mercado_Agro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="163"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="398" height="163"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ad3" translatesAutoresizingMaskIntoConstraints="NO" id="dpR-He-hqW">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="163"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dpR-He-hqW" secondAttribute="trailing" id="HBt-2D-GtH"/>
+                <constraint firstAttribute="bottom" secondItem="dpR-He-hqW" secondAttribute="bottom" id="biM-tD-ryN"/>
+                <constraint firstItem="dpR-He-hqW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hMm-1G-0iv"/>
+                <constraint firstItem="dpR-He-hqW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xa3-pq-0Sz"/>
+            </constraints>
+            <size key="customSize" width="398" height="163"/>
+            <connections>
+                <outlet property="offerImage" destination="dpR-He-hqW" id="PuJ-Aj-aZu"/>
+            </connections>
+            <point key="canvasLocation" x="-368.11594202898556" y="35.15625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Ad3" width="650" height="308"/>
+    </resources>
+</document>
