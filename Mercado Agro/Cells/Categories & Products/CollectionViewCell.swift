@@ -35,6 +35,9 @@ class CollectionViewCell: UICollectionViewCell {
         return UINib(nibName: CollectionViewCell.identifier, bundle: nil)
     }
     
+    /*
+     // Manages the data sent by TableViewCell.
+     */
     public func configure(with model: ModelP) {
         self.productNameLabel.text = model.text
         self.productPriceLabel.text = model.price

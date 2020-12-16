@@ -28,7 +28,7 @@ class HomeScreen: UIViewController {
         
         self.tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
         self.tableView.register(OffersTableViewCell.nib(), forCellReuseIdentifier: OffersTableViewCell.identifier)
-                
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -37,16 +37,18 @@ class HomeScreen: UIViewController {
         customizedNavigationController()
         customizedSearchBar()
         customizedTableView()
-        
-        ////////////////////////////////////////////////////////////////////////
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        
-//        let ad: OffersTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! OffersTableViewCell
-//        ad.collectionView.scrollToItem(at: IndexPath(row: 500, section: 0), at: .centeredHorizontally, animated: false)
-//    }
+    /*
+     // OffersTableViewCell scrolls up to the middle row (row 500, since it has 1000 rows due to the
+     [unscrollableRecord = 1000].
+     */
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let ad: OffersTableViewCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! OffersTableViewCell
+        ad.collectionView.scrollToItem(at: IndexPath(row: 500, section: 0), at: .centeredHorizontally, animated: false)
+    }
     
     func customizedNavigationController() {
         navigationController?.navigationBar.isTranslucent = true
@@ -55,7 +57,6 @@ class HomeScreen: UIViewController {
         
         navigationItem.titleView = searchController.searchBar
         searchController.hidesNavigationBarDuringPresentation = false
-        
     }
     
     func customizedSearchBar() {
@@ -111,6 +112,11 @@ extension HomeScreen: UITableViewDelegate {
 
 extension HomeScreen: UITableViewDataSource {
     
+    /*
+     // [section = 0] The numberOfRowsInSection = (model.count + Ad's row).
+     // Since the OffersTableViewCell only scrolls horizontally, it only takes up 1 row, that's where the '+1' comes
+     from.
+     */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count + 1
     }
@@ -119,6 +125,10 @@ extension HomeScreen: UITableViewDataSource {
         return 1
     }
     
+    /*
+     // If indexPath.row == 0 --> OffersTableViewCell will be inserted.
+     // If indexPath.row > 0 --> CatalogueTableViewCell (currently TableViewCell CHANGE NAME) will be inserted.
+     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: OffersTableViewCell.identifier, for: indexPath) as! OffersTableViewCell

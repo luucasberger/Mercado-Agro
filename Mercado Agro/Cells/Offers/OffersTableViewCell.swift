@@ -16,9 +16,9 @@ class OffersTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.register(OffersCollectionViewCell.nib(), forCellWithReuseIdentifier: OffersCollectionViewCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(OffersCollectionViewCell.nib(), forCellWithReuseIdentifier: OffersCollectionViewCell.identifier)
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -29,9 +29,9 @@ class OffersTableViewCell: UITableViewCell {
         //        flowLayout.sectionInset.bottom = 0
         //        flowLayout.sectionInset.right = 50
         //        flowLayout.sectionInset.top = 0
-        self.collectionView.collectionViewLayout = flowLayout
-        self.collectionView.showsHorizontalScrollIndicator = false
-        self.collectionView.isPagingEnabled = true
+        collectionView.collectionViewLayout = flowLayout
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.isPagingEnabled = true
         
         customizedOffersTableViewCell()
     }
@@ -63,10 +63,18 @@ class OffersTableViewCell: UITableViewCell {
 
 extension OffersTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    /*
+     // Carousel effect in 'collectionView'.
+     */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return unscrollableRecord
     }
     
+    /*
+     // offerImages[indexPath.row % offerImages.count]: Specific formula implemented for the 'Carousel Effect',
+     so that when the 'indexPath' of the collectionView exceeds the number of items inside 'offerImages' doesn't
+     crash the app by accessing non-existing data.
+     */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OffersCollectionViewCell.identifier, for: indexPath) as! OffersCollectionViewCell
         cell.configure(with: offerImages[indexPath.row % offerImages.count])
@@ -75,10 +83,6 @@ extension OffersTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 63, bottom: 0, right: 5)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 40
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

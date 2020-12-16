@@ -20,7 +20,13 @@ class OffersCollectionViewCell: UICollectionViewCell {
     static func nib() -> UINib {
         return UINib(nibName: OffersCollectionViewCell.identifier, bundle: nil)
     }
-    
+
+    /*
+     // Add's selected images to the OffersCollectionViewCell.
+     // Process: Selected images come originally from 'HomeScreen.swift', then they are
+     managed by OffersTableViewCell when creating the UICollectionViewCell, and finally
+     inserted by OffersCollectionViewCell.
+     */
     public func configure(with image: String) {
         offerImage.image = UIImage(named: image)
     }
